@@ -1,8 +1,9 @@
 {
   "name": "@steelbreeze/graph",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Graph libraries for TypeScript and JavaScript",
   "main": "./lib/node/index.js",
+  "typings": "./lib/node/index.d.ts",
   "directories": {
     "example": "examples",
     "lib": "lib",
