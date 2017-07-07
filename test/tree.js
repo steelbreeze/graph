@@ -29,12 +29,12 @@ describe("test/tree.js", function () {
 	});
 
 	it("Common ancestor", function () {
-//		assert.equal(root, tree.lowestCommonAncestor(root, root));
-//		assert.equal(root, tree.lowestCommonAncestor(root, left));
-//		assert.equal(root, tree.lowestCommonAncestor(root, right));
-//		assert.equal(root, tree.lowestCommonAncestor(root, rightLeft));
-//		assert.equal(root, tree.lowestCommonAncestor(root, rightRight));
-//		assert.equal(undefined, tree.lowestCommonAncestor(root, other));
+		assert.equal(0, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(root), graph.Tree.ancestors(root)));
+		assert.equal(0, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(root), graph.Tree.ancestors(left)));
+		assert.equal(0, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(root), graph.Tree.ancestors(right)));
+		assert.equal(0, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(root), graph.Tree.ancestors(rightLeft)));
+		assert.equal(0, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(root), graph.Tree.ancestors(rightRight)));
+		assert.equal(-1, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(root), graph.Tree.ancestors(other)));
 
 		assert.equal(0, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(left), graph.Tree.ancestors(root)));
 		assert.equal(1, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(left), graph.Tree.ancestors(left)));
@@ -57,12 +57,12 @@ describe("test/tree.js", function () {
 		assert.equal(1, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(rightLeft), graph.Tree.ancestors(rightRight)));
 		assert.equal(-1, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(rightLeft), graph.Tree.ancestors(other)));
 
-//		assert.equal(root, tree.lowestCommonAncestor(rightRight, root));
-//		assert.equal(root, tree.lowestCommonAncestor(rightRight, left));
-//		assert.equal(right, tree.lowestCommonAncestor(rightRight, right));
-//		assert.equal(right, tree.lowestCommonAncestor(rightRight, rightLeft));
-//		assert.equal(rightRight, tree.lowestCommonAncestor(rightRight, rightRight));
-//		assert.equal(undefined, tree.lowestCommonAncestor(rightRight, other));
+		assert.equal(0, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(rightRight), graph.Tree.ancestors(root)));
+		assert.equal(0, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(rightRight), graph.Tree.ancestors(left)));
+		assert.equal(1, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(rightRight), graph.Tree.ancestors(right)));
+		assert.equal(1, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(rightRight), graph.Tree.ancestors(rightLeft)));
+		assert.equal(2, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(rightRight), graph.Tree.ancestors(rightRight)));
+		assert.equal(-1, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(rightRight), graph.Tree.ancestors(other)));
 
 		assert.equal(-1, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(other), graph.Tree.ancestors(root)));
 		assert.equal(-1, graph.Tree.lowestCommonAncestorIndex(graph.Tree.ancestors(other), graph.Tree.ancestors(left)));
