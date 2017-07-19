@@ -3,6 +3,8 @@ Graph algorithms
 
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][npm-url]
+    [![Build Status](https://travis-ci.org/steelbreeze/graph.svg?branch=master)](https://travis-ci.org/steelbreeze/graph)
+
 
 This package is initially provided to provide support to @steelbreeze/state, but will be expanded over time as a more general purpose library of graph algorithms.
 
