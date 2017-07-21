@@ -5,6 +5,7 @@ Graph algorithms
 [![NPM Downloads][downloads-image]][npm-url]
 [![Build Status](https://travis-ci.org/steelbreeze/graph.svg?branch=master)](https://travis-ci.org/steelbreeze/graph)
 [![Code Climate](https://codeclimate.com/github/steelbreeze/graph/badges/gpa.svg)](https://codeclimate.com/github/steelbreeze/graph)
+[![Issue Count](https://codeclimate.com/github/steelbreeze/graph/badges/issue_count.svg)](https://codeclimate.com/github/steelbreeze/graph)
 [![Test Coverage](https://codeclimate.com/github/steelbreeze/graph/badges/coverage.svg)](https://codeclimate.com/github/steelbreeze/graph/coverage)
 
 
