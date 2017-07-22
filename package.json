@@ -10,9 +10,10 @@
 		"test": "test"
 	},
 	"scripts": {
-		"test": "mocha"
+		"test": "nyc mocha"
 	},
 	"devDependencies": {
+		"nyc": "10.0.3",
 		"mocha": "3.4.2"
 	},
 	"repository": {
