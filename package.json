@@ -12,7 +12,7 @@
 	"scripts": {
 		"test": "mocha"
 	},
-	"dependencies": {
+	"devDependencies": {
 		"mocha": "3.4.2"
 	},
 	"repository": {
