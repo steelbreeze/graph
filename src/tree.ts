@@ -14,7 +14,7 @@ export namespace Tree {
 	 * @param TNode A common type shared by all node instances within the tree.
 	 * @param node The node to return the ancestry for.
 	 */
-	export function ancestors<TNode extends { parent: TNode | undefined }>(node: TNode): Array<TNode> {
+	export function ancestors<TNode extends { parent: any }>(node: TNode): Array<TNode> {
 		const result: Array<TNode> = [];
 
 		for (let i: TNode | undefined = node; i !== undefined; i = i.parent) {
@@ -51,7 +51,7 @@ export namespace Tree {
 	 * @param child The possible child node.
 	 * @param parent The parent node.
 	 */
-	export function isChild<TNode extends { parent: TNode | undefined }>(child: TNode, parent: TNode): boolean {
+	export function isChild<TNode extends { parent: any }>(child: TNode, parent: TNode): boolean {
 		for (let i: TNode | undefined = child; i !== undefined; i = i.parent) {
 			if (i.parent === parent) {
 				return true;
@@ -67,7 +67,7 @@ export namespace Tree {
 	 * @param child The node to get the depth of.
 	 * @returns The number of edges between the node an the root node. Returns -1 an undefined node is passed.
 	 */
-	export function depth<TNode extends { parent: TNode | undefined }>(node: TNode): number {
+	export function depth<TNode extends { parent: any }>(node: TNode): number {
 		let result = -1;
 
 		for (let i: TNode | undefined = node; i !== undefined; i = i.parent) {

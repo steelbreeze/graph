@@ -14,7 +14,7 @@ export declare namespace Tree {
      * @param node The node to return the ancestry for.
      */
     function ancestors<TNode extends {
-        parent: TNode | undefined;
+        parent: any;
     }>(node: TNode): Array<TNode>;
     /**
      * Returns the index of the lowest/least common ancestor given a pair of ancestrys.
@@ -31,7 +31,7 @@ export declare namespace Tree {
      * @param parent The parent node.
      */
     function isChild<TNode extends {
-        parent: TNode | undefined;
+        parent: any;
     }>(child: TNode, parent: TNode): boolean;
     /**
      * Returns the depth (number of edges from a node to the root) of a node.
@@ -40,6 +40,6 @@ export declare namespace Tree {
      * @returns The number of edges between the node an the root node. Returns -1 an undefined node is passed.
      */
     function depth<TNode extends {
-        parent: TNode | undefined;
+        parent: any;
     }>(node: TNode): number;
 }
