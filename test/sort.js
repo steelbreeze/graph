@@ -25,7 +25,7 @@ function dependencies2(i) {
 
 describe("test/sort.js", function () {
 	it("topological/sort", function () {
-		const sorted1 = graph.Sort.topological(data, dependencies1, true);
+		const sorted1 = graph.Sort.topological(data, dependencies1);
 
 		assert.equal('C', sorted1[0].name);
 		assert.equal('D', sorted1[1].name);

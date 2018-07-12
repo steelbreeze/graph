@@ -1,5 +1,5 @@
 /**
- * @module tree
+ * @module sort
  * 
  * A small library of sorting algorithms.
  * 
@@ -7,22 +7,6 @@
  * 
  * Licensed under the MIT licence
  */
-
-function visit<T>(item: T, visited: Array<T>, sorted: Array<T>, dependencies: (item: T) => Array<T>, throwOnCircularDependency: boolean): void {
-	if (visited.indexOf(item) === -1) {
-		visited.push(item);
-
-		for (const dependency of dependencies(item)) {
-			visit(dependency, visited, sorted, dependencies, throwOnCircularDependency);
-		}
-
-		sorted.push(item);
-	} else {
-		if (throwOnCircularDependency && sorted.indexOf(item) === -1) {
-			throw new Error('Topologicalt sort: circular dependency detected');
-		}
-	}
-}
 
 export namespace Sort {
 	/**
@@ -36,9 +20,21 @@ export namespace Sort {
 		var sorted = new Array<T>();
 		var visited = new Array<T>();
 
-		for (const item of source) {
-			visit(item, visited, sorted, dependencies, throwOnCircularDependency);
+		function visit(item: T): void {
+			if (visited.indexOf(item) === -1) {
+				visited.push(item);
+
+				dependencies(item).forEach(visit);
+
+				sorted.push(item);
+			} else {
+				if (throwOnCircularDependency && sorted.indexOf(item) === -1) {
+					throw new Error('Topologicalt sort: circular dependency detected');
+				}
+			}
 		}
+
+		source.forEach(visit);
 
 		return sorted;
 	}

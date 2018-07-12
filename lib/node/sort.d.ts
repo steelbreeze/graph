@@ -1,5 +1,5 @@
 /**
- * @module tree
+ * @module sort
  *
  * A small library of sorting algorithms.
  *
