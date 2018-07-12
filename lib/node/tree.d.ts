@@ -5,7 +5,7 @@
  *
  * @copyright (c) 2017 David Mesquita-Morris
  *
- * Licensed under the MIT and GPL v3 licences
+ * Licensed under the MIT licence
  */
 export declare namespace Tree {
     /**

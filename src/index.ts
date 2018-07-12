@@ -5,7 +5,7 @@
  * 
  * @copyright (c) 2017-8 David Mesquita-Morris
  * 
- * Licensed under the MIT and GPL v3 licences
+ * Licensed under the MIT licence
  */
 
 // pull in the tree algorithms
