@@ -1,4 +1,4 @@
-import { Tree } from "../lib/node/index";
+import { Tree } from "@steelbreeze/graph";
 
 function test<TNode extends { parent: TNode | undefined }>(node1: TNode, node2): void {
 	const ancestry1 = Tree.ancestors(node1);

@@ -1,10 +1,10 @@
 "use strict";
 exports.__esModule = true;
-var index_1 = require("../lib/node/index");
+var graph_1 = require("@steelbreeze/graph");
 function test(node1, node2) {
-    var ancestry1 = index_1.Tree.ancestors(node1);
-    var ancestry2 = index_1.Tree.ancestors(node2);
-    var i = index_1.Tree.lowestCommonAncestorIndex(ancestry1, ancestry2);
+    var ancestry1 = graph_1.Tree.ancestors(node1);
+    var ancestry2 = graph_1.Tree.ancestors(node2);
+    var i = graph_1.Tree.lowestCommonAncestorIndex(ancestry1, ancestry2);
     if (i !== -1) {
         var ancestor = ancestry1[i];
         console.log("Common ancestor of " + node1 + " and " + node2 + " is " + ancestor);
