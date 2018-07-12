@@ -29,7 +29,7 @@ export namespace Sort {
 				sorted.push(item);
 			} else {
 				if (throwOnCircularDependency && sorted.indexOf(item) === -1) {
-					throw new Error('Topologicalt sort: circular dependency detected');
+					throw new Error('Topological sort: circular dependency detected');
 				}
 			}
 		}
