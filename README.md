@@ -19,7 +19,7 @@ npm i @steelbreeze/graph
 ## License
 MIT License
 
-Copyright (c) 2017 David Mesquita-Morris
+Copyright (c) 2017-9 David Mesquita-Morris
 
 [npm-image]: https://img.shields.io/npm/v/@steelbreeze/graph.svg
 [npm-url]:       https://www.npmjs.com/package/@steelbreeze/graph
